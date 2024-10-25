@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de ejemplo estilo red social">
+    <title>Muñeca (CACSPMEC)</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1176535442703794319/1299010922462838865/image.png?ex=671cf732&is=671ba5b2&hm=7800aea9b0df1df2b6993b662cbf4019da406419a08d1772936ebb7f48bede03&.png" type="image/png">
+</head>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ebee;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4267B2;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+            background-color: #3b5998;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .container {
+            display: none;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .visible {
+            display: flex;
+        }
+
+        .section {
+            width: 80%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .product-card span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        footer {
+            background-color: #3b5998;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Muñeca (Caspmec)</h1>
+    </header>
+
+    <nav>
+        <a onclick="showSection('inicio')">Inicio</a>
+        <a onclick="showSection('catalogo')">Catálogo</a>
+        <a onclick="showSection('contacto')">Contáctanos</a>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <div id="inicio" class="container visible">
+        <div class="section">
+            <h2>Bienvenido a Muñeca (Caspmec)</h2>
+            
+            <!-- Aquí agregamos el logo dentro del contenido de la sección de "Inicio" -->
+            <img src="https://cdn.discordapp.com/attachments/1176535442703794319/1299010922462838865/image.png?ex=671ba5b2&is=671a5432&hm=f5408dad0c68ad0df3e33faee4861518496b31ff547a042910b2ca37d2b852e7&.png" alt="Logo de Muñeca" style="width: 250px; margin: 20px 0;">
+            
+            <p>Bienvendi@, Somos Muñeca. Operando con el fin de poder plasmar lo abstracto del ser humano, sus sentimientos, emociones y sus vínculos afectivos con las demás personas. 💞</p>
+            <p>Ofrecemos pulseras personalizadas para compartir con la persona que más quieras y así poder materializar su afecto. 😊</p>
+        </div>
+    </div>
+
+    <!-- Sección Catálogo -->
+    <div id="catalogo" class="container">
+        <div class="section">
+            <h2>Nuestro Catálogo</h2>
+            <div class="catalog-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 1">
+                    <h3>Pulsera de Cuentas</h3>
+                    <p><span>$15.99</span></p>
+                    <p>Elegante pulsera hecha con cuentas de colores vibrantes.</p>
+                </div>
+            
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 2">
+                    <h3>Pulsera de Hilo</h3>
+                    <p><span>$12.99</span></p>
+                    <p>Pulsera tejida a mano con hilos de varios colores.</p>
+                </div>
+            
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 3">
+                    <h3>Pulsera de Cuero</h3>
+                    <p><span>$19.99</span></p>
+                    <p>Pulsera de cuero genuino con detalles metálicos.</p>
+                </div>
+            
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 4">
+                    <h3>Pulsera Minimalista</h3>
+                    <p><span>$10.99</span></p>
+                    <p>Diseño sencillo y elegante, ideal para cualquier ocasión.</p>
+                </div>
+            
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 5">
+                    <h3>Pulsera de Plata</h3>
+                    <p><span>$25.99</span></p>
+                    <p>Pulsera fina hecha de plata esterlina con detalles delicados.</p>
+                </div>
+            
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 6">
+                    <h3>Pulsera con Amuleto</h3>
+                    <p><span>$18.99</span></p>
+                    <p>Pulsera con amuleto de buena suerte, ideal para regalar.</p>
+                </div>
+            
+                <!-- Producto 7 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 7">
+                    <h3>Pulsera de Cristal</h3>
+                    <p><span>$22.50</span></p>
+                    <p>Pulsera decorada con cristales brillantes de varios colores.</p>
+                </div>
+            
+                <!-- Producto 8 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 8">
+                    <h3>Pulsera Ancha</h3>
+                    <p><span>$13.99</span></p>
+                    <p>Pulsera de cuero ancho con detalles trenzados.</p>
+                </div>
+            
+                <!-- Producto 9 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 9">
+                    <h3>Pulsera con Charms</h3>
+                    <p><span>$29.99</span></p>
+                    <p>Pulsera personalizable con charms de plata.</p>
+                </div>
+            
+                <!-- Producto 10 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 10">
+                    <h3>Pulsera de Cobre</h3>
+                    <p><span>$16.50</span></p>
+                    <p>Pulsera artesanal hecha de cobre con detalles de grabado.</p>
+                </div>
+            
+                <!-- Producto 11 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 11">
+                    <h3>Pulsera de Piedra</h3>
+                    <p><span>$14.99</span></p>
+                    <p>Pulsera con piedras naturales y diseño rústico.</p>
+                </div>
+            
+                <!-- Producto 12 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 12">
+                    <h3>Pulsera Trenzada</h3>
+                    <p><span>$11.99</span></p>
+                    <p>Pulsera hecha a mano con trenzas de colores.</p>
+                </div>
+            
+                <!-- Producto 13 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 13">
+                    <h3>Pulsera de Metal</h3>
+                    <p><span>$17.99</span></p>
+                    <p>Pulsera de acero inoxidable con diseño moderno.</p>
+                </div>
+            
+                <!-- Producto 14 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 14">
+                    <h3>Pulsera de Caucho</h3>
+                    <p><span>$9.99</span></p>
+                    <p>Pulsera casual de caucho con detalles grabados.</p>
+                </div>
+            
+                <!-- Producto 15 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 15">
+                    <h3>Pulsera Étnica</h3>
+                    <p><span>$20.99</span></p>
+                    <p>Pulsera inspirada en patrones étnicos y colores vivos.</p>
+                </div>
+            
+                <!-- Producto 16 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 16">
+                    <h3>Pulsera de Perlas</h3>
+                    <p><span>$32.99</span></p>
+                    <p>Pulsera clásica con perlas naturales.</p>
+                </div>
+            
+                <!-- Producto 17 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 17">
+                    <h3>Pulsera de Tela</h3>
+                    <p><span>$7.99</span></p>
+                    <p>Pulsera de tela con patrones geométricos.</p>
+                </div>
+            
+                <!-- Producto 18 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 18">
+                    <h3>Pulsera Vintage</h3>
+                    <p><span>$21.50</span></p>
+                    <p>Pulsera con estilo retro y detalles dorados.</p>
+                </div>
+            
+                <!-- Producto 19 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 19">
+                    <h3>Pulsera con Gemas</h3>
+                    <p><span>$28.99</span></p>
+                    <p>Pulsera adornada con gemas naturales de varios colores.</p>
+                </div>
+            
+                <!-- Producto 20 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Pulsera 20">
+                    <h3>Pulsera de Oro</h3>
+                    <p><span>$45.99</span></p>
+                    <p>Pulsera de oro laminado con detalles delicados.</p>
+                </div>
+            </div>            
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Contacto -->
+<div id="contacto" class="container">
+    <div class="section">
+        <h2>¡Síguenos en nuestras redes sociales!</h2>
+        <p>Encuéntranos en nuestras plataformas sociales y mantente al tanto de las últimas novedades.</p>
+
+        <!-- Iconos de redes sociales -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook" class="icon">
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <img src="tiktok-icon.png" alt="TikTok" class="icon">
+            </a> 
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram" class="icon">
+            </a>
+            <h2>¡Si deseas contactarnos!</h2>
+            <p>Aqui te dejamos nuestros numero telefonicos</p>
+            <a href="https://wa.me/c/593999797881" target="_blank">
+                <img src="instagram-icon.png" alt="Numero WhatsApp" class="icon">
+            </a>           
+        </div>
+    </div>
+</div>
+
+
+
+    <footer>
+        <p>© 2024 Muñeca. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas las secciones
+            const sections = document.querySelectorAll('.container');
+            sections.forEach(section => {
+                section.classList.remove('visible');
+            });
+
+            // Muestra la sección seleccionada
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('visible');
+        }
+    </script>
+
+</body>
+</html>
